@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-signature font test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        .center{
+            margin: 48px auto;
+            width: 50%;
+        }
+        form {
+            padding: 24px 0;
+        }
+        label, input {
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+        #output {
+            font-family: "Dancing Script", "Open Sans", Arial, sans-serif;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form>
+            <label for="name">Full name</label><br>
+            <input type="text" id="name" name="name" oninput="updateOutput(this.value)">
+        </form>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        let output = document.getElementById("output");
+        function updateOutput(val){
+            output.innerHTML = val;
+        }
+    </script>
+</body>
+</html>
